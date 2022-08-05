@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'website';
-}
+  
+  constructor(){}
+  ngOnInit(){}
+    
+  
+    url:string = "../assets/img1.jpg";
+    changeImage(event:any){
+        this.url = event.target.src;
+        console.log();
+    }
+  
+  }
+
