@@ -6,15 +6,15 @@
       <h1><span>Best</span> Seller</h1>
     </div>
     <div class="row">
-      <div class="col-md-3">
+      <div class="col-md-3" *ngFor="let seller of sellers">
         <div class="card">
         <div class="cart-main">
           <div class="discount">9%</div>
           <div class="label label-green">Pre-order</div>
           <div class="product-container">
-            <div class="p" (mouseover)="changeImage($event)"><img src="../assets/img1.jpg" alt="product"></div>
-            <div class="p" (mouseover)="changeImage($event)"><img src="../assets/img2.jpg" alt="product"></div>
-            <div class="p" (mouseover)="changeImage($event)"><img src="../assets/img3.jpg" alt="product"></div>
+            <div class="p" (mouseover)="changeImage($event)"><img src="{{seller.image1}}" alt="product"></div>
+            <div class="p" (mouseover)="changeImage($event)"><img src="{{seller.image2}}" alt="product"></div>
+            <div class="p" (mouseover)="changeImage($event)"><img src="{{seller.image3}}" alt="product"></div>
           </div>
          <div class="image">
             <img src="{{url}}" alt="image">
@@ -46,87 +46,98 @@
         </div>
       </div>
       </div>
-      <div class="col-md-3">
-        <div class="card">
-        <div class="cart-main">
-          <div class="discount">9%</div>
-          <div class="label label-green">Pre-order</div>
-          <div class="product-container">
-            <div class="p" (mouseover)="changeImage($event)"><img src="../assets/img1.jpg" alt="product"></div>
-            <div class="p" (mouseover)="changeImage($event)"><img src="../assets/image1.jpg" alt="product"></div>
-            <div class="p" (mouseover)="changeImage($event)"><img src="../assets/img5.jpg" alt="product"></div>
-          </div>
-         <div class="image">
-            <img src="{{url}}" alt="image">
-          </div>
-          
-          
-          <div class="cart-line">
-            <div class="cart-item">
-            <ul>
-              <li><a href=""><i class="fa fa-shopping-basket"></i></a></li>
-              <li><a href=""><i class="fa fa-heart"></i></a></li>
-              <li><a href=""><i class="fa fa-search"></i></a></li>
-              
-            </ul>
-            </div>
-            </div>
-          </div>
-        
-        <div class="content">
-        <a href="">Indidid Tongue Bar</a>
-        <div class="rating">
-          <i class="fa fa-star-o"></i>
-          <i class="fa fa-star-o"></i>
-          <i class="fa fa-star-o"></i>
-          <i class="fa fa-star-o"></i>
-          <i class="fa fa-star-o"></i>  
-        </div>
-        <p><span class="money">$81.00<span class="old-price">$80.00</span></span></p>
-        </div>
-      </div>
-      </div>
-      <div class="col-md-3">
-        <div class="card">
-        <div class="cart-main">
-          <div class="discount">9%</div>
-          <div class="label label-green">Pre-order</div>
-          <div class="product-container">
-            <div class="p" (mouseover)="changeImage($event)"><img src="../assets/img4.jpg" alt="product"></div>
-            <div class="p" (mouseover)="changeImage($event)"><img src="../assets/img2.jpg" alt="product"></div>
-            <div class="p" (mouseover)="changeImage($event)"><img src="../assets/image1.jpg" alt="product"></div>
-          </div>
-         <div class="image">
-            <img src="{{url}}" alt="image">
-          </div>
-          
-          
-          <div class="cart-line">
-            <div class="cart-item">
-            <ul>
-              <li><a href=""><i class="fa fa-shopping-basket"></i></a></li>
-              <li><a href=""><i class="fa fa-heart"></i></a></li>
-              <li><a href=""><i class="fa fa-search"></i></a></li>
-              
-            </ul>
-            </div>
-            </div>
-          </div>
-        
-        <div class="content">
-        <a href="">Indidid Tongue Bar</a>
-        <div class="rating">
-          <i class="fa fa-star-o"></i>
-          <i class="fa fa-star-o"></i>
-          <i class="fa fa-star-o"></i>
-          <i class="fa fa-star-o"></i>
-          <i class="fa fa-star-o"></i>  
-        </div>
-        <p><span class="money">$81.00<span class="old-price">$80.00</span></span></p>
-        </div>
-      </div>
-      </div>
-      
+ 
     </div>
   </div>
+</section>
+
+
+<section class="policy">
+  <div class="containers">
+      <div class="row">
+          <div class="col-md-4">
+            <div class="policy-card">
+              <div class="round">
+                <div class="round-icon">
+                  <i class="fa fa-car"></i>
+                </div>
+              </div>
+              <h2>Free Shipping &amp; Return</h2>
+              <p>Free Shipping on all UK</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="policy-card">
+              <div class="round">
+                <div class="round-icon">
+                  <i class="fa fa-refresh"></i>
+                </div>
+              </div>
+              <h2>Money Back Guarentee</h2>
+              <p>30 days money back Guarentee</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="policy-card">
+              <div class="round">
+                <div class="round-icon">
+                  <i class="fa fa-phone"></i>
+                </div>
+              </div>
+              <h2>Online Support 24/24</h2>
+              <p>we Support online 24/24 on a day</p>
+            </div>
+          </div>
+      </div>
+  </div>
+
+
+<div class="policy-product">
+<div class="containers">
+  <div class="row">
+    <div class="col-md-4" *ngFor="let policy of policys">
+      <div class="policy-p-card">
+    
+      <div class="date">
+        <h3>{{policy.date_days}}</h3>
+        <h4>{{policy.date_month}}</h4>
+      </div>
+      <div class="policy-img">
+        <img src="{{policy.imageUrl}}" alt="p1">
+      </div>
+      <h2>{{policy.title}}</h2>
+      <p>{{policy.description}}</p>  
+      <a href="" class="read-more">Read more <i class="fa fa-caret-right"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+
+<section class="partners">
+<div class="containers">
+  <div class="rows">
+    <div class="col-md-2">
+      <img src="../assets/policy/p2.png" alt="partners">
+    </div>
+    <div class="col-md-2">
+      <img src="../assets/policy/p3.png" alt="partners">
+    </div>
+    <div class="col-md-2">
+      <img src="../assets/policy/p4.jpg" alt="partners">
+    </div>
+    <div class="col-md-2">
+      <img src="../assets/policy/p5.png" alt="partners">
+    </div>
+    <div class="col-md-2">
+      <img src="../assets/policy/p6.png" alt="partners">
+    </div>
+    <div class="col-md-2">
+      <img src="../assets/policy/p1.png" alt="partners">
+    </div>
+    
+    
+  </div>
+</div>
 </section>
