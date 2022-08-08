@@ -3,6 +3,8 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 import { policy } from './policy';
 import { PolicyService } from './policy.service';
 import { seller } from './bestSeller';
+import { footer } from './footer';
+
 
 @Component({
   selector: 'app-root',
@@ -14,6 +16,7 @@ export class AppComponent implements OnInit {
   policy: any;
   sellers: seller[] =[];
   seller:any;
+  footers: footer[] =[];
   partnersArray:any = [
     {
       imgName: "../assets/policy/p1.png"
@@ -37,6 +40,7 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.policys = this.ps.getAll();
     this.sellers = this.ps.getseller();
+    this.footers = this.ps.getfooter();
     
   }
     
@@ -79,7 +83,7 @@ export class AppComponent implements OnInit {
       pullDrag: true,
       dots: false,
       navSpeed: 700,
-      navText: ['<i class="fa fa-caret-right"></i>', '<i class="fa fa-caret-left"></i>'],
+      navText: ['<i class="fa fa-caret-left"></i>', '<i class="fa fa-caret-right"></i>'],
       responsive: {
         0: {
           items: 1
