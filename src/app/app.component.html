@@ -94,50 +94,135 @@
 
 <div class="policy-product">
 <div class="containers">
-  <div class="row">
-    <div class="col-md-4" *ngFor="let policy of policys">
+
+  <owl-carousel-o [options]="policyOptions">
+    <ng-template carouselSlide *ngFor ="let policy of policys">
+    
       <div class="policy-p-card">
     
-      <div class="date">
-        <h3>{{policy.date_days}}</h3>
-        <h4>{{policy.date_month}}</h4>
-      </div>
-      <div class="policy-img">
-        <img src="{{policy.imageUrl}}" alt="p1">
-      </div>
-      <h2>{{policy.title}}</h2>
-      <p>{{policy.description}}</p>  
-      <a href="" class="read-more">Read more <i class="fa fa-caret-right"></i></a>
-      </div>
-    </div>
+        <div class="date">
+          <h3>{{policy.date_days}}</h3>
+          <h4>{{policy.date_month}}</h4>
+        </div>
+        <div class="policy-img">
+          <img src="{{policy.imageUrl}}" alt="p1">
+        </div>
+        <h2>{{policy.title}}</h2>
+        <p>{{policy.description}}</p>  
+        <a href="" class="read-more">Read more <i class="fa fa-caret-right"></i></a>
+        </div>
+     </ng-template>
+  </owl-carousel-o>
+    
   </div>
 </div>
-</div>
+
 </section>
 
 <section class="partners">
-<div class="containers">
-  <div class="rows">
-    <div class="col-md-2">
-      <img src="../assets/policy/p2.png" alt="partners">
+<div class="cont">
+  <owl-carousel-o [options]="customOptions">
+    <ng-template carouselSlide *ngFor="let partnersArrays of partnersArray">
+    <img src="{{partnersArrays.imgName }}" alt="partners"></ng-template>  
+  </owl-carousel-o>
+  
+</div>
+</section>
+
+<section class="footer-top">
+  <div class="containers">
+  <div class="row">
+  <div class="col-1">
+    <div class="footer-logo">
+      <img src="../assets/policy/p6.png" alt="footer-logo">
     </div>
-    <div class="col-md-2">
-      <img src="../assets/policy/p3.png" alt="partners">
+    <div class="footer-top-menu">
+      <ul>
+        <li>
+          <i class="fa fa-home"></i>
+          <span class="heading">Address:</span>
+          <span class="address">1702 los Angeles. California, America</span>
+        </li>
+        <li>
+            <i class="fa fa-envelope"></i>
+            <span class="heading">Mail Us:</span>
+            <span class="email">
+              <a href="">example@gmail.com</a>
+            </span>
+        </li>
+        <li>
+            <i class="fa-phone"></i>
+            <span class="heading">phone:</span>
+            <span class="number">
+              <a href="tel:1-888-345-6799"> 1-888-345-6799</a>
+            </span>
+        </li>
+        <li>
+            <a href="">
+              <img src="../assets/footer/payment.jpg" alt="footer-logo">
+            </a>
+        </li>
+      </ul>
     </div>
-    <div class="col-md-2">
-      <img src="../assets/policy/p4.jpg" alt="partners">
+  </div>
+  <div class="col-2" *ngFor="let footer of footers">
+    <div class="footer-all-menu">
+      <h2>{{footer.title}}</h2>
+      <ul>
+        <li>
+            <i class="fa fa-circle"></i>
+            <a href="">{{footer.c1}}</a>
+        </li>
+        <li>
+          <i class="fa fa-circle"></i>
+          <a href="">{{footer.c2}}</a>
+      </li>
+      <li>
+        <i class="fa fa-circle"></i>
+        <a href="">{{footer.c3}}</a>
+    </li>
+    <li>
+      <i class="fa fa-circle"></i>
+      <a href="">{{footer.c4}}</a>
+  </li>
+  <li>
+    <i class="fa fa-circle"></i>
+    <a href="">{{footer.c5}}</a>
+</li>
+      </ul>
     </div>
-    <div class="col-md-2">
-      <img src="../assets/policy/p5.png" alt="partners">
+  </div>
+  
+  </div>
+  </div>
+</section>
+<section class="footer-middle">
+  <div class="container">
+  <div class="row">
+  <div class="col-md-4">
+  <h2>Sign up for our exclusive Newsletter</h2>
+  </div>
+  <div class="col-md-4">
+    <input type="mail" class="input" placeholder="Email">
+    <button type="button" class="btn"><i class="fa fa-location-arrow"></i></button>
+  </div>
+  <div class="co-md-4">
+    <div class="social text-center">
+    <ul>
+      <li><a href=""><i class="fa fa-facebook"></i></a></li>
+      <li><a href=""><i class="fa fa-twitter"></i></a></li>
+      <li><a href=""><i class="fa fa-pinterest"></i></a></li>
+      <li><a href=""><i class="fa fa-instagram"></i></a></li>
+      <li><a href=""><i class="fa fa-google-plus"></i></a></li>
+    </ul>
     </div>
-    <div class="col-md-2">
-      <img src="../assets/policy/p6.png" alt="partners">
-    </div>
-    <div class="col-md-2">
-      <img src="../assets/policy/p1.png" alt="partners">
-    </div>
-    
-    
+  </div>
   </div>
 </div>
 </section>
+
+<footer>
+<div class="containers text-center">
+  <p>@ 2021 Hitheme Designed by <a href="">Creative Developer </a> All Right Reserve</p>
+</div>
+</footer>
