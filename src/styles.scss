@@ -4,6 +4,61 @@ body{
     margin: 0;
     background: #eee;
 }
+
+.banner{
+    position: relative;
+    margin: 0;
+    padding: 0;
+.owl-next, .owl-prev{
+    width: 110px;
+    height: 110px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+    background: transparent !important;
+i{
+    font-size: 20px;
+    position: absolute;
+    color: #eee;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+}
+.owl-next{
+    right: -60px;
+i{
+    right: 0%;
+}
+}
+.owl-prev{
+    left: 6px;
+}
+}
+.banner .owl-prev::before, .banner .owl-next::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 110px;
+    height: 110px;
+    background: #ffffff24;
+    border-radius: 50%;
+ }
+ .banner .owl-next::before{
+    right: -106px;
+}
+.banner .owl-prev::before{
+    left: 44px;
+}
+.banner .owl-next:hover::before , .banner .owl-prev:hover::before {
+    background: #ff4000;
+    color: #fff;
+}
 .testimonial .owl-prev, .testimonial .owl-next{
     position: absolute !important;
     background: #ffffff24 !important;
@@ -12,10 +67,6 @@ body{
     z-index: 2 !important;
     font-size: 24px !important;
     border-radius: 50% !important;
-    -webkit-border-radius: 50% !important;
-    -moz-border-radius: 50% !important;
-    -ms-border-radius: 50% !important;
-    -o-border-radius: 50% !important;
     color: #111 !important;
     transition: all .3s ease !important;
     top: 50%;
