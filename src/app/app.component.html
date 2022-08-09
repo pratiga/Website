@@ -1,4 +1,21 @@
-
+<section class="testimonial">
+  <div class="containers">
+  <owl-carousel-o [options]="TestimonialOptions" >
+    <ng-template carouselSlide *ngFor="let testimonial of testimonials">
+   
+      <div class="testimonial-image">
+        <img src="{{testimonial.image}}" alt="Testimonial">
+      </div>
+      <div class="testimonial-content">
+          <h2>{{testimonial.title}}</h2>
+          <h3>Web Designed</h3>
+          <p>{{testimonial.description}}</p>
+      </div>
+    
+    </ng-template>
+  </owl-carousel-o>
+  </div>
+</section>
 <section class="bg-color">
   <div class="containers">
     <div class="title">

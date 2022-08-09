@@ -4,6 +4,7 @@ import { policy } from './policy';
 import { PolicyService } from './policy.service';
 import { seller } from './bestSeller';
 import { footer } from './footer';
+import { testimonial } from './testimonial';
 
 
 @Component({
@@ -17,6 +18,8 @@ export class AppComponent implements OnInit {
   sellers: seller[] =[];
   seller:any;
   footers: footer[] =[];
+  testimonials: testimonial[] = []
+  
   partnersArray:any = [
     {
       imgName: "../assets/policy/p1.png"
@@ -41,6 +44,7 @@ export class AppComponent implements OnInit {
     this.policys = this.ps.getAll();
     this.sellers = this.ps.getseller();
     this.footers = this.ps.getfooter();
+    this.testimonials = this.ps.getTestimonial();
     
   }
     
@@ -49,6 +53,31 @@ export class AppComponent implements OnInit {
     changeImage(event:any){
         this.url = event.target.src;
         console.log();
+    }
+    
+    TestimonialOptions: OwlOptions = {
+      loop: true,
+      mouseDrag: true,
+      touchDrag: true,
+      pullDrag: true,
+      dots: false,
+      navSpeed: 700,
+      navText: ['<i class="fa fa-caret-left"></i>', '<i class="fa fa-caret-right"></i>'],
+      responsive: {
+        0: {
+          items: 1
+        },
+        400: {
+          items: 1
+        },
+        740: {
+          items: 1
+        },
+        940: {
+          items: 1
+        }
+      },
+      nav: true
     }
     
     customOptions: OwlOptions = {
