@@ -1,1 +1,80 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    padding: 0;
+    margin: 0;
+    background: #eee;
+}
+.testimonial .owl-prev, .testimonial .owl-next{
+    position: absolute !important;
+    background: #ffffff24 !important;
+    width: 64px !important;
+    height: 64px !important;
+    z-index: 2 !important;
+    font-size: 24px !important;
+    border-radius: 50% !important;
+    -webkit-border-radius: 50% !important;
+    -moz-border-radius: 50% !important;
+    -ms-border-radius: 50% !important;
+    -o-border-radius: 50% !important;
+    color: #111 !important;
+    transition: all .3s ease !important;
+    top: 50%;
+    transform: translate(-50%, -50%) !important;
+
+ i{
+     position: absolute !important;
+     top: 50% !important;
+     left: 50% !important;
+     transform: translate(-50%, -50%);
+     -webkit-transform: translate(-50%, -50%);
+     -moz-transform: translate(-50%, -50%);
+     -ms-transform: translate(-50%, -50%);
+     -o-transform: translate(-50%, -50%);
+}   
+}
+.testimonial .owl-prev{
+    left: 114px !important;  
+}
+.testimonial .owl-next{
+    right: 48px !important;
+}
+.testimonial .owl-prev:hover, .testimonial .owl-next:hover{
+    background: #ff4000 !important;
+    color: #fff !important;
+}
+
+
+.policy-product .owl-prev, .policy-product .owl-next{
+    background-color: rgba(225, 215, 215, 0.781)!important;
+    color: #222!important;
+    height: 60px !important;
+    width: 50px !important;
+    border-radius: 50% !important;
+    position: absolute;
+    top: 50%;
+    transition: .3s all ease;
+ i{
+    font-size: 2.4rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+}
+.policy-product .owl-next{
+    right: -68px;
+    transform: translate(-50%, -50%); 
+}
+.policy-product .owl-prev{
+    left: -8px;
+    transform: translate(-50%, -50%); 
+}
+.policy-product .owl-prev:hover, .policy-product .owl-next:hover{
+    background: #ff4000 !important;
+    color: #fff !important;
+    
+    
+}
+
+
