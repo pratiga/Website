@@ -54,6 +54,31 @@ export class AppComponent implements OnInit {
         this.url = event.target.src;
         console.log();
     }
+    BannerOptions: OwlOptions = {
+      loop: true,
+      mouseDrag: true,
+      touchDrag: true,
+      pullDrag: true,
+      dots: false,
+      navSpeed: 700,
+      navText: ['<i class="fa fa-arrow-left"></i>', '<i class="fa fa-arrow-right"></i>'],
+      responsive: {
+        0: {
+          items: 1
+        },
+        400: {
+          items: 1
+        },
+        740: {
+          items: 1
+        },
+        940: {
+          items: 1
+        }
+      },
+      nav: true
+    }
+    
     
     TestimonialOptions: OwlOptions = {
       loop: true,
