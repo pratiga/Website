@@ -1,6 +1,175 @@
-.container{
+.containers{
     width: 90%;
     margin: 0 auto;
+}
+.banner img{
+    height: 30rem;
+    
+}
+.best-selling{
+    position: relative;
+    top: -60px;
+    z-index: 1;
+.best-selling-container{
+    position: relative;
+    background-color: #ffff;
+    padding: 0 40px 0 0;
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: 25% 50% 30%;
+.sale-price{
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-color: #ff4000;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px ;
+    padding: 12px;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 26px;
+    width: 260px;
+    text-align: center;
+}
+.selling-col-1{
+    width: 16px;
+    display: block;
+    vertical-align: middle;
+    z-index: 1;
+.selling-left{
+    margin: 0;
+    padding: 0;
+    
+
+ul{
+    padding: 0;
+    margin-top: 6rem;
+li{
+    text-align: center;
+    background: #f5f5f5;
+    border-bottom: 1px solid #dbdbdb;
+    display: block;
+    line-height: 22px;
+    width: 10rem;
+    padding: 22px;
+    color: #111;
+}
+
+  li:first-child{
+    padding-top: 116px;
+    border-top-left-radius: 10px;
+}
+  li:last-child{
+    border-bottom: none;
+    border-bottom-left-radius: 10px;
+
+}
+  li .count-date{
+      color: #000;
+      font-size: 30px;
+      font-weight: 800;
+      display: block;
+      letter-spacing: 0.6px;
+  }
+  
+  li .count-day{
+      color: #555;
+      display: block;
+      font-size: 18px;
+  }
+  
+}
+}
+}
+.selling-col-3, .selling-col-2 {
+    width: 42%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.selling-img img{
+    height: 30rem;
+    margin-top: 5rem;
+    align-items: center;
+}
+
+.selling-heading{
+    margin-top: 4rem;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #dbdbdb;
+ a{
+     font-size: 28px;
+     text-transform: capitalize;
+     font-weight: 600;
+     text-decoration: none;
+     color: #555;
+     transition: all .3s ease;
+     
+}  
+ a:hover{
+     color: #ff4000;
+ } 
+ .selling-rating{
+     margin-top: 4px;
+    i{
+     color: #ff4000;
+     margin-right: 4px;
+     font-size: 12px;
+    }
+     
+ }
+}
+.selling-col-3{
+
+ p{
+    
+    color: #777;
+    line-height: 22px;
+    margin: 20px 0;
+}
+ h3{
+ .selling-amount{
+     font-weight: 700;
+     font-size: 30px;
+     color: #ff4000;
+     font-style: italic;
+ }
+ .selling-discount{
+     color: #555;
+     font-size: 22px;
+     line-height: 18px;
+     font-weight: 600;
+     text-decoration: line-through;
+     margin-left: 10px;
+     font-style: italic;
+ }
+}
+ .selling-button{
+     margin-top: 34px;
+ }
+ .cart-btn{
+    background: #ff4000;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 12px 34px;
+    text-decoration: none;
+    margin-right: 14px;
+    border-radius: 4px;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 600;
+    transition: all .3s ease;
+i{
+    margin-right: 10px;
+}
+}
+ .cart-btn:hover{
+     background: #c30;
+     color: #fff;
+ }
+}
+
+}
 }
 
 .testimonial{
