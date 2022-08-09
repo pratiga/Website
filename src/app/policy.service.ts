@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { policy } from './policy';
 import { seller } from './bestSeller';
 import { footer } from './footer';
+import { testimonial} from './testimonial'
 @Injectable({
   providedIn: 'root'
 })
@@ -28,6 +29,35 @@ export class PolicyService {
         image2:'./assets/img4.jpg',
         image3:'./assets/img3.jpg',
       },
+      
+    ]
+  }
+  getTestimonial():testimonial[]{
+    return[
+    {
+      id:1,
+      title:"testimonial event",
+      image:"../assets/testimonial/m1.jpg",
+      description:"ext of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries", 
+    } ,
+    {
+      id:1,
+      title:"testimonial event",
+      image:"../assets/testimonial/m2.jpeg",
+      description:"ext of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries", 
+    } ,
+    {
+      id:1,
+      title:"testimonial event",
+      image:"../assets/testimonial/m3.jpeg",
+      description:"ext of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries", 
+    } ,
+    {
+      id:1,
+      title:"testimonial event",
+      image:"../assets/testimonial/m4.jpg",
+      description:"ext of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries", 
+    } ,
       
     ]
   }
