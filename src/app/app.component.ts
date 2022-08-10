@@ -19,6 +19,7 @@ export class AppComponent implements OnInit {
   seller:any;
   footers: footer[] =[];
   testimonials: testimonial[] = []
+ 
   
   partnersArray:any = [
     {
@@ -45,8 +46,17 @@ export class AppComponent implements OnInit {
     this.sellers = this.ps.getseller();
     this.footers = this.ps.getfooter();
     this.testimonials = this.ps.getTestimonial();
-    
+   
   }
+    id:any;
+    drop(param:any){
+      if(this.id == param){
+        this.id = "";
+      }
+      else{
+      this.id = param;
+      }
+    }
     
   
     url:string = "../assets/img1.jpg";
@@ -154,6 +164,22 @@ export class AppComponent implements OnInit {
       },
       nav: true
     }
-  
+    days:any = 194;
+    hours:number = 22;
+    mins:number = 14;
+     secs:number = 4;
+   x =  setInterval(()=>{
+      var futureDate = new Date("jan 4, 2022 15:34:24").getTime();
+      var today = new Date().getTime();
+      var distance = futureDate - today;
+      this.days = Math.floor(distance / (1000 * 60 *60 *24));
+      this.hours = Math.floor((distance % (1000 *60 *60 *24))/ (1000 * 60 * 60));
+      this.mins = Math.floor((distance % (1000 * 60 * 60))/ (1000 * 60));
+      this.secs = Math.floor((distance % (1000 * 60)) / (1000));
+      if(distance < 0){
+        clearInterval(this.x);
+        this.days = "Offer Is Expired";
+      }
+    }, 1000)
   }
 
