@@ -1,3 +1,71 @@
+<header>
+  <div class="container">
+  <div class="row">
+  <div class="col-md-4">
+    <div class="language">
+      <ul>
+        <li (click) ="drop('language')">
+          <div class="english">English<i class="fa fa-caret-down"></i>
+            <div class="dropdown" *ngIf="id === 'language'">
+              <ul>
+                <li>English
+                </li><li>Arabic</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li (click) = "drop('currency')">
+          <div class="english">USD<i class="fa fa-caret-down"></i>
+            <div class="dropdown" *ngIf="id === 'currency'">
+              <ul>
+                <li>USD
+                </li><li>EUR</li>
+                <li>GBP</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+  <div class="col-md-8">
+    <div class="social-menu">
+      <ul>
+      <li>
+          <a href="javascript:void(0)">
+            <i class="fa fa-facebook"></i>
+            
+          </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)">
+          <i class="fa fa-twitter"></i>
+          
+        </a>
+    </li>
+    <li>
+      <a href="javascript:void(0)">
+        <i class="fa fa-instagram"></i> 
+      </a>
+  </li>
+  <li>
+    <a href="javascript:void(0)">
+      <i class="fa fa-google-plus"></i>
+    </a>
+</li>
+<li>
+  <a href="javascript:void(0)" class="login">
+    Login
+  </a>
+</li>
+      </ul>
+    </div>
+  </div>
+  </div>
+  </div>
+
+</header>
 <section class="banner">
 <owl-carousel-o [options] = "BannerOptions">
 <ng-template carouselSlide> <img src="../assets/banner/b2.jpg" alt="banner"></ng-template>
@@ -18,22 +86,22 @@
       <div class="selling-left">
       <ul>
         <li>
-        <span class="count-date">194</span>
+        <span class="count-date">{{days}}</span>
         <span class="count-day">Days</span>
         
         </li>
         <li>
-          <span class="count-date">01</span>
+          <span class="count-date">{{ hours}}</span>
           <span class="count-day">Hours</span>
           
           </li>
           <li>
-            <span class="count-date">22</span>
+            <span class="count-date">{{mins}}</span>
             <span class="count-day">Mins</span>
             
             </li>
           <li>
-            <span class="count-date">19</span>
+            <span class="count-date">{{secs}}</span>
             <span class="count-day">Secs</span>
             
             </li>
@@ -65,7 +133,7 @@
         <div class="selling-button">
           <a href="javascript:void(0)" class="cart-btn"><i class="fa fa-shopping"></i>Add To Cart</a>
          <button  type="button" class="main-button">
-          <a href="javascript:void(0)"><i class="fa fa-heart"></i></a>
+          <a href="javascript:void(0)"><i class="fa fa-search"></i></a>
           <a href="javascript:void(0)"><i class="fa fa-heart"></i></a>
 
 
